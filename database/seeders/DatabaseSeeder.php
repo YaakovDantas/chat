@@ -1,0 +1,30 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Canal;
+use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // User::factory(10)->create();
+
+        Canal::factory()->create([
+            'nome' => 'Geral',
+        ]);
+
+        Canal::factory()->create([
+            'nome' => 'Específico',
+        ]);
+        Canal::factory()->create([
+            'nome' => 'secreto',
+        ]);
+    }
+}
